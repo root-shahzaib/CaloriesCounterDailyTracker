@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="@string/beforeafter_text"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     android:textAlignment="center"
+     android:id="@+id/toptext"
+     />
+    <RelativeLayout
+        android:layout_marginTop="30sp"
+        android:layout_width="150sp"
+        android:layout_height="180sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toptext"
+        android:id="@+id/beforeafter_before_layout"
+        android:layout_marginLeft="10sp"
+        >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:id="@+id/BeforeImg_beforeafter"
+        android:src="@drawable/ggg"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Old You"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAlignment="center"
+            android:id="@+id/oldyou_text"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_below="@id/BeforeImg_beforeafter"
+            android:layout_centerHorizontal="true"
+
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="30sp"
+        android:layout_width="150sp"
+        android:layout_height="180sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toptext"
+        android:id="@+id/beforeafter_after_layout"
+        android:layout_marginRight="10sp"
+        >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:id="@+id/afterImg_beforeafter"
+        android:src="@drawable/ggg"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New You"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/newyouyou_text"
+            android:layout_below="@id/afterImg_beforeafter"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            />
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

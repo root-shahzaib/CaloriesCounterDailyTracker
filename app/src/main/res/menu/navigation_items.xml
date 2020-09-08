@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single" android:id="@+id/group1">
+        <item
+            android:id="@+id/Dashboard_nav"
+            android:title="Dashboard"
+            android:icon="@drawable/ic_baseline_dashboard_24"
+            />
+        <item
+            android:id="@+id/Meals_nav"
+            android:title="Meals"
+            android:icon="@drawable/ic_baseline_local_dining_24"
+            />
+        <item
+            android:id="@+id/Weight_nav"
+            android:title="Weight"
+            android:icon="@drawable/ic_baseline_line_weight_24"
+            />
+        <item
+            android:id="@+id/Excerise_nav"
+            android:title="Exercise"
+            android:icon="@drawable/ic_baseline_accessibility"
+            />
+    </group>
+    <group android:checkableBehavior="single" android:id="@+id/group2">
+
+    <item
+            android:id="@+id/Water_nav"
+            android:title="Water"
+            android:icon="@drawable/ic_baseline_hourglass_full"
+            />
+        <item
+            android:id="@+id/Notepad_nav"
+            android:title="Daily Notepad"
+            android:icon="@drawable/ic_baseline_note_add"
+            />
+
+        <item
+            android:id="@+id/Vitamins_nav"
+            android:title="Vitamins"
+            android:icon="@drawable/ic_baseline_note_add"
+            />
+    </group>
+    <group android:checkableBehavior="single" android:id="@+id/group3">
+
+    <item
+            android:id="@+id/MyPlans_nav"
+            android:title="My Plan"
+            android:icon="@drawable/ic_baseline_golf_course"
+            />
+        <item
+            android:id="@+id/BeforeAndAfter_nav"
+            android:title="Before &amp; After"
+            android:icon="@drawable/ic_baseline_image"
+            />
+    </group>
+    <group android:checkableBehavior="single" android:id="@+id/group4">
+
+        <item
+            android:id="@+id/Recipes_nav"
+            android:title="Recipes &amp; facts"
+            android:icon="@drawable/ic_baseline_view_headline"
+            />
+        <item
+            android:id="@+id/healthblog_nav"
+            android:title="Health blogs"
+            android:icon="@drawable/ic_baseline_view_headline"
+            />
+        <item
+            android:id="@+id/shareit_nav"
+            android:title="Share app"
+            android:icon="@drawable/ic_baseline_share"
+            />
+    </group>
+
+</menu>
