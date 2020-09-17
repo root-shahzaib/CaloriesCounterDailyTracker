@@ -1,4 +1,4 @@
-package com.calories.counter.daily.tracker.Fragments;
+package com.calories.counter.daily.tracker.Fragments.BeforeAfter;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;

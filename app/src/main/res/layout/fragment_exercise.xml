@@ -7,9 +7,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="400sp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
+
         <ImageView
             android:layout_width="30sp"
             android:layout_height="30sp"
@@ -18,62 +18,44 @@
             android:src="@drawable/walk"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="General Jogging"
             android:layout_marginLeft="140sp"
             android:layout_marginTop="20sp"
-            />
+            android:text="General Jogging" />
 
 
         <EditText
             android:layout_width="100sp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="90sp"
-            />
+            android:layout_marginTop="90sp" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="min"
             android:layout_marginLeft="140sp"
             android:layout_marginTop="120sp"
-            />
+            android:text="min" />
+
         <EditText
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50sp"
-            android:text="Note"
-            />
+            android:text="Note" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="793 Cals"
-            android:textSize="30sp"
             android:layout_marginLeft="40sp"
             android:layout_marginTop="190sp"
-            />
-
-
-
-
-
-
-
-
+            android:text="793 Cals"
+            android:textSize="30sp" />
 
 
     </RelativeLayout>
-
-
-
-
-
-
-
-
 
     <ImageView
         android:layout_width="30sp"
@@ -83,6 +65,7 @@
         android:src="@drawable/walk"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:layout_width="30sp"
         android:layout_height="30sp"
@@ -91,6 +74,7 @@
         android:src="@drawable/fast"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:layout_width="30sp"
         android:layout_height="30sp"
@@ -99,12 +83,12 @@
         android:src="@drawable/sport"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="50sp"
         android:text="OK"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

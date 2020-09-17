@@ -1,122 +1,282 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <RelativeLayout
-        android:id="@+id/weight_gender_layout"
+    android:layout_height="match_parent"
+    android:background="#87ceeb"
+    android:backgroundTint="@android:color/white">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/weight_female_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="210sp"
-            android:text="FEMALE" />
-
-        <Button
-            android:id="@+id/weight_male_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="120sp"
-            android:text="MALE"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/weight_height_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/weight_gender_layout">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="feet"
-            android:layout_marginLeft="40sp"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="inches"
-            android:layout_marginLeft="100sp"
-            />
-        <TimePicker
-            android:layout_width="wrap_content"
-            android:layout_height="200sp"
-            android:timePickerMode="spinner"
-            android:id="@+id/weight_timerpickerforheight_id"
-            />
-
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/weight_dob_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/weight_height_layout">
-
-        <DatePicker
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:splitMotionEvents="false">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100sp"
-            android:calendarViewShown="false"
-            android:datePickerMode="spinner"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/weight_targetweight_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/weight_dob_layout">
-
-        <EditText
-            android:id="@+id/weight_weight_id"
-            android:layout_width="200sp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Weight" />
+            android:layout_margin="0dp"
+            android:orientation="horizontal"
+            android:splitMotionEvents="false">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="NAME:"
+                android:textColor="#000000"
+                android:textSize="21dp"
+                android:textStyle="bold"></TextView>
+            <EditText
+                android:id="@+id/name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"></EditText>
 
-        <EditText
-            android:id="@+id/weight_targetweight_id"
-            android:layout_width="200sp"
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/weight_weight_id"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10sp"
-            android:text="target weight" />
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:splitMotionEvents="false">
 
-        <Button
+            <RadioButton
+                android:id="@+id/male_rdbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></RadioButton>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/descriptionedit"
+                android:gravity="center_horizontal"
+                android:text="MALE"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="21dp"
+                android:textStyle="bold"></TextView>
+
+            <RadioButton
+                android:id="@+id/female_rdbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></RadioButton>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/descriptionedit"
+                android:gravity="center_horizontal"
+                android:text="FEMALE"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="21dp"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:splitMotionEvents="false">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/descriptionedit"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="AGE:"
+                android:textColor="#000000"
+                android:textSize="21dp"
+                android:textStyle="bold"></TextView>
+
+            <NumberPicker
+                android:id="@+id/age_pickernumber"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"></NumberPicker>
+        </LinearLayout>
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="50sp"
-            android:text="RECOMMEND"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/descriptionedit"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="HEIGHT:"
+            android:textColor="#000000"
+            android:textSize="21dp"
+            android:textStyle="bold"></TextView>
 
-            />
-    </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:splitMotionEvents="false">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50sp"
-        android:text="NEXT"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:splitMotionEvents="false">
+
+                <TextView
+                    android:id="@+id/feettxt_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/descriptionedit"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="Feet"
+                    android:textColor="#000000"
+                    android:textSize="21dp"
+                    android:textStyle="bold"></TextView>
+
+                <NumberPicker
+                    android:id="@+id/feet_numberpicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/feettxt_id"
+                    android:layout_marginTop="10dp"></NumberPicker>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:splitMotionEvents="false">
+
+                <TextView
+                    android:id="@+id/inchtxt_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/descriptionedit"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Inches"
+                    android:textColor="#000000"
+                    android:textSize="21dp"
+                    android:textStyle="bold"></TextView>
+
+                <NumberPicker
+                    android:id="@+id/inches_numberpicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/inchtxt_id"
+                    android:layout_marginTop="10dp"></NumberPicker>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:splitMotionEvents="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/descriptionedit"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="WEIGHT:"
+                android:textColor="#000000"
+                android:textSize="21dp"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/weight_et"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"></EditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kg"
+                android:textColor="#000000"
+                android:textSize="21dp"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:splitMotionEvents="false">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/descriptionedit"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="TARGET:"
+                android:textColor="#000000"
+                android:textSize="21dp"
+                android:textStyle="bold"></TextView>
+
+            <EditText
+                android:inputType="number"
+                android:id="@+id/targetWeight_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.2"></EditText>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:text="NEXT"
+            android:textColor="@android:color/white"
+            android:textSize="26dp"
+            android:textStyle="bold"></Button>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

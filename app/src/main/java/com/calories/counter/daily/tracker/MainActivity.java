@@ -9,24 +9,30 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
-import com.calories.counter.daily.tracker.Database.BreakfastHelperDatabase;
-import com.calories.counter.daily.tracker.Fragments.BeforeAfter;
-import com.calories.counter.daily.tracker.Fragments.Dashboard;
-import com.calories.counter.daily.tracker.Fragments.DialyNotepad;
-import com.calories.counter.daily.tracker.Fragments.Exercise;
-import com.calories.counter.daily.tracker.Fragments.HealthBlogs;
+import com.calories.counter.daily.tracker.Fragments.Weight.ShowWeightData;
+import com.calories.counter.daily.tracker.Fragments.Weight.WeightDBModel;
+import com.calories.counter.daily.tracker.MealDatabase.CaloriesDatabase;
+import com.calories.counter.daily.tracker.Fragments.BeforeAfter.BeforeAfter;
+import com.calories.counter.daily.tracker.Fragments.Dashboard.Dashboard;
+import com.calories.counter.daily.tracker.Fragments.DailyNotepad.DialyNotepad;
+import com.calories.counter.daily.tracker.Fragments.Excerise.Exercise;
+import com.calories.counter.daily.tracker.Fragments.HealthBlog.HealthBlogs;
 import com.calories.counter.daily.tracker.Fragments.Meal.Meals;
 import com.calories.counter.daily.tracker.Fragments.MyPlans.MyPlan;
-import com.calories.counter.daily.tracker.Fragments.RecipesFacts;
-import com.calories.counter.daily.tracker.Fragments.Vitamins;
+import com.calories.counter.daily.tracker.Fragments.RecipesAndFacts.RecipesFacts;
+import com.calories.counter.daily.tracker.Fragments.Vitamins.Vitamins;
 import com.calories.counter.daily.tracker.Fragments.Water.Water;
 import com.calories.counter.daily.tracker.Fragments.Weight.Weight;
+import com.calories.counter.daily.tracker.MealDatabase.ModelClasses.WeightModel;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -35,8 +41,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     DrawerLayout drawerLayout;
     SQLiteDatabase database;
-    BreakfastHelperDatabase helperDatabase;
+    CaloriesDatabase helperDatabase;
     FrameLayout frameLayout;
+    private int vl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +58,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.Dashboard_nav);
         onNavigationItemSelected(navigationView.getMenu().getItem(0));
+        helperDatabase = new CaloriesDatabase(this);
+        database = helperDatabase.getWritableDatabase();
 
-
-    }
+     }
 
     public void findViewById() {
         Button button = (Button) findViewById(R.id.getdatabutton);
@@ -91,7 +99,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 fragment = new Meals();
                 break;
             case R.id.Weight_nav:
-                fragment = new Weight();
+               int val =  helperDatabase.getProfilesCount(database);
+                if(val == 0) {
+                    fragment = new Weight();
+                }
+                else
+                {
+                    fragment = new ShowWeightData();
+                }
                 break;
             case R.id.Excerise_nav:
                 fragment = new Exercise();

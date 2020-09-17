@@ -11,9 +11,9 @@
 
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/plan_layout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/plan_layout1"
 
             >
 
@@ -39,10 +39,11 @@
 
 
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/plan_layout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/plan_layout2"
             android:layout_below="@id/plan_layout1"
 
             >
@@ -69,10 +70,11 @@
 
 
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/plan_layout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/plan_layout3"
             android:layout_below="@id/plan_layout2"
 
             >
@@ -99,10 +101,11 @@
 
 
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/plan_layout4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/plan_layout4"
             android:layout_below="@id/plan_layout3"
 
             >
@@ -131,6 +134,6 @@
         </androidx.cardview.widget.CardView>
 
 
-
     </RelativeLayout>
+
 </FrameLayout>

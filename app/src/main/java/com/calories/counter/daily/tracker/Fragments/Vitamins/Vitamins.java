@@ -1,4 +1,4 @@
-package com.calories.counter.daily.tracker.Fragments;
+package com.calories.counter.daily.tracker.Fragments.Vitamins;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
