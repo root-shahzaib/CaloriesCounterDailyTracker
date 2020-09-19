@@ -1,12 +1,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_centerInParent="true"
     android:padding="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:background="#FFFFFF"
         android:orientation="horizontal">
@@ -14,7 +13,6 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:padding="16dp">
 
             <LinearLayout
@@ -127,7 +125,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="50dp"
 
             >
 
@@ -190,23 +187,12 @@
                     android:textSize="20sp"></TextView>
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/caloriesshow"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center_horizontal"
-                android:text="View All Meals"
-                android:textColor="#1D65D1"
-                android:textSize="15sp"></TextView>
-
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:padding="16dp"
 
             >
@@ -319,10 +305,6 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/getdatabutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GET DATA" />
+
 
 </RelativeLayout>

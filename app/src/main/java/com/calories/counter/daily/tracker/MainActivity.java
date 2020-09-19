@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
      }
 
     public void findViewById() {
-        Button button = (Button) findViewById(R.id.getdatabutton);
+
         drawerLayout = (DrawerLayout) findViewById(R.id.main_drawer);
         navigationView = (NavigationView) findViewById(R.id.main_navigationview);
         frameLayout = (FrameLayout) findViewById(R.id.fragment_container);
